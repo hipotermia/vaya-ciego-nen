@@ -1,9 +1,9 @@
 # vaya-ciego-nen
 **vaya-ciego-nen** is a tool that allows you to create your own webapp to detect, manage and exploit **Blind Cross-site scripting (XSS)** vulnerabilities.
 
-![Dashboard](/static/img/dashboard.png)
+![Dashboard](/static/img/dash.png)
 
-![More Info](/static/img/more-info.png)
+![More Info](/static/img/info.png)
 
 ## How does it work?
 This webapp serves a malicious JavaScript payload that will execute if a XSS is present, retrieving cookies, a screenshot and more info. This info can be seen in a dashboard where you're able to manage all the triggers, which are stored in a PostgreSQL database.
