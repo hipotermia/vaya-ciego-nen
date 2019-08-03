@@ -18,10 +18,11 @@ var fields = {
 				'<b>Password:</b> ' + trigger.password;
 			}
 			else {
-				var html = '<h5>' + trigger.url + ' [' + trigger.time + '] - ' + trigger.ip + '</h5>' +
+				var html = '<h5>' + trigger.url + ' [' + trigger.time + ']</h5>' +
 				'<div style="font-size: 11pt;text-align: left;padding: 0 15%;">' +
-				'<h6>Extra</h6><p>' + trigger.extra + '</p>' +		
+				'<h6>Extra</h6><p>' + trigger.extra + '</p>' +
 				'<h6>Cookies</h6><p>' + trigger.cookies + '</p>' +
+				'<h6>IP</h6><p>' + trigger.ip + '</p>' +
 				'<h6>User-Agent</h6><p>' + trigger.useragent + '</p>' +
 				'<h6>localStorage</h6><p>' + trigger.localStorage + '</p>' +
 				'<h6>sessionStorage</h6><p>' + trigger.sessionStorage + '</p>' +
