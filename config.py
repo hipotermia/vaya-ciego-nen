@@ -1,3 +1,3 @@
 AUTH_USERNAME = 'admin'
 AUTH_PASSWORD = 'password'
-DOMAIN = 'your_domain_name.herokuapp.com'
+DOMAIN = 'name_of_your_app.herokuapp.com'
