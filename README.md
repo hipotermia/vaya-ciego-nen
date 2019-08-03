@@ -1,9 +1,10 @@
 # vaya-ciego-nen
 **vaya-ciego-nen** is a tool that allows you to create your own webapp to detect, manage and exploit **Blind Cross-site scripting (XSS)** vulnerabilities.
 
-![Dashboard](/static/img/dash.png)
-
-![More Info](/static/img/info.png)
+<p align="center">
+  <img src="/static/img/dash.png">
+  <img src="/static/img/info.png">
+</p>
 
 ## How does it work?
 This webapp serves a malicious JavaScript payload that will execute if a XSS is present, retrieving cookies, a screenshot and more info. This info can be seen in a dashboard where you're able to manage all the triggers, which are stored in a PostgreSQL database.
@@ -34,4 +35,6 @@ Create different payloads for each input using `name_of_your_app.herokuapp.com/?
 No worries, use `name_of_your_app.herokuapp.com/phish` in your payload and instead of collecting info, a fake login panel will appear in the victim's browser and if he enters its credentials, they're going to be sent to your dashboard! A cookie will be set on the victim's browser to control the login panel just appears once to avoid suspicion.
 > **Note:** Most bugbounties don't allow phishing attacks on their programs. Don't do this if you're 100% sure you're allowed.
 
-![Login](/static/img/login.png)
+<p align="center">
+  <img src="/static/img/login.png">
+</p>
