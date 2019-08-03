@@ -105,7 +105,7 @@ def phished():
 @basic_auth.required
 def get_triggers():
 	with get_cursor() as cur:
-		cur.execute("SELECT * FROM triggers")
+		cur.execute("SELECT * FROM triggers order by time desc")
 		triggers = cur.fetchall()
 	return jsonify(triggers)
 

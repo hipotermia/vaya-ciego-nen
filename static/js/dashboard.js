@@ -1,8 +1,14 @@
 var fields = {
 	id: { name: 'ID' },
+	time: { 
+		name: 'Time (GMT)',
+		special: function(trigger){
+			var d = new Date(Date.parse(trigger.time));
+			return d.toISOString().replace('T','<br>').split('.')[0];
+		}
+	},
 	extra: { name: 'Extra' },
 	url: { name: 'URL' },
-	time: { name: 'Time' },
 	ip: { name: 'IP' },
 	info: { 
 		name: 'More info',
@@ -57,7 +63,7 @@ var fields = {
 							}
 						});						
 					}
-				})
+				});
 			});
 		}
 	}
@@ -67,10 +73,11 @@ $(function(){
 	var $table = $('#triggers');
 	
 	$.get('/triggers', function(triggers){
-		var $tbody = $('<tbody></tbody>');
+		var $tbody = $('<tbody style="text-align:center"></tbody>');
 		$.each(triggers, function(_, trigger){
 			var $row = $('<tr></tr>');
 			$.each(fields, function(key, field) {
+				console.log(trigger[key], )
 				var $td = $('<td style="vertical-align:middle"></td>');
 				if('special' in field) $td.html(field.special(trigger));
 				else $td.text(trigger[key]);
@@ -86,5 +93,5 @@ $(function(){
 	$.each(fields, function(_, field) {
 		$rowhead.append('<th>' + field.name + '</th>');
 	});
-	$table.prepend($('<thead></thead>').append($rowhead));
+	$table.prepend($('<thead style="text-align:center"></thead>').append($rowhead));
 });
