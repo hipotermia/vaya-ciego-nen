@@ -1,6 +1,9 @@
 # vaya-ciego-nen
 **vaya-ciego-nen** is a tool that allows you to create your own webapp to detect, manage and exploit **Blind Cross-site scripting (XSS)** vulnerabilities.
 
+A more detailed guide about this tool can be found [here](https://hipotermia.pw/guide/vaya-ciego-nen).
+
+
 <p align="center">
   <img src="/static/img/dash.png">
   <img src="/static/img/info.png">
