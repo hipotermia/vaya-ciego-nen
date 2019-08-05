@@ -36,7 +36,7 @@ Create different payloads for each input using `name_of_your_app.herokuapp.com/?
 
 ## HttpOnly on the session cookie?
 No worries, use `name_of_your_app.herokuapp.com/phish` in your payload and instead of collecting info, a fake login panel will appear in the victim's browser and if he enters its credentials, they're going to be sent to your dashboard! A cookie will be set on the victim's browser to control the login panel just appears once to avoid suspicion.
-> **Note:** Most bugbounties don't allow phishing attacks on their programs. Don't do this if you're 100% sure you're allowed.
+> **Note:** Most bugbounties don't allow phishing attacks on their programs. Don't do this unless you're 100% sure you're allowed.
 
 <p align="center">
   <img src="/static/img/login.png">
