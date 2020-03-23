@@ -13,7 +13,7 @@ A more detailed guide about this tool can be found [here](https://hipotermia.pw/
 This webapp serves a malicious JavaScript payload that will execute if a XSS is present, retrieving cookies, a screenshot and more info. This info can be seen in a dashboard where you're able to manage all the triggers, which are stored in a PostgreSQL database.
 
 ## Usage
-The project is oriented to be deployed in a **free** [heroku](heroku.com) instance, but the changes are minimum if you want to use the code in your own server.
+The project is oriented to be deployed in a **free** [heroku](https://heroku.com) instance, but the changes are minimum if you want to use the code in your own server.
 
 First, you'll need to install [`heroku-cli`](https://devcenter.heroku.com/articles/heroku-cli) if you don't have it already. Then:
 ```
