@@ -31,7 +31,7 @@ var fields = {
 				'<h6>localStorage</h6><p>' + shitty_encode(trigger.localStorage) + '</p>' +
 				'<h6>sessionStorage</h6><p>' + shitty_encode(trigger.sessionStorage) + '</p>' +
 				'</div>' +
-				'<a href="' + shitty_encode(trigger.canvas) + '" target="_blank"><img class="img-fluid" style="max-height:500px" src="' + shitty_encode(trigger.canvas) + '"></a>' +
+				'<div style="max-height:500px; overflow:auto"><a href="' + shitty_encode(trigger.canvas) + '" target="_blank"><img class="img-fluid" src="' + shitty_encode(trigger.canvas) + '"></a></div>' +
 				'<textarea style="min-height:150px;font-size:11px" class="form-control" readonly>' + shitty_encode(trigger.html) + '</textarea>';
 
 				return $('<button class="btn btn-sm btn-primary">View</button>').click(function(){
