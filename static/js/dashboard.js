@@ -1,3 +1,7 @@
+function shitty_encode(s){
+	return s ? s.replace(/</g,"&lt;").replace(/"/g,"&quot;") : "-";
+}
+ 
 var fields = {
 	id: { name: 'ID' },
 	time: { 
@@ -14,21 +18,21 @@ var fields = {
 		name: 'More info',
 		special: function(trigger){			
 			if (trigger.username || trigger.password){
-				return '<b>Username:</b> ' + trigger.username + '<br>' + 
-				'<b>Password:</b> ' + trigger.password;
+				return '<b>Username:</b> ' + shitty_encode(trigger.username) + '<br>' + 
+				'<b>Password:</b> ' + shitty_encode(trigger.password);
 			}
 			else {
-				var html = '<h5>' + trigger.url + ' [' + trigger.time + ']</h5>' +
+				var html = '<h5>' + shitty_encode(trigger.url) + ' [' + shitty_encode(trigger.time) + ']</h5>' +
 				'<div style="font-size: 11pt;text-align: left;padding: 0 15%;">' +
-				'<h6>Extra</h6><p>' + trigger.extra + '</p>' +
-				'<h6>Cookies</h6><p>' + trigger.cookies + '</p>' +
-				'<h6>IP</h6><p>' + trigger.ip + '</p>' +
-				'<h6>User-Agent</h6><p>' + trigger.useragent + '</p>' +
-				'<h6>localStorage</h6><p>' + trigger.localStorage + '</p>' +
-				'<h6>sessionStorage</h6><p>' + trigger.sessionStorage + '</p>' +
+				'<h6>Extra</h6><p>' + shitty_encode(trigger.extra) + '</p>' +
+				'<h6>Cookies</h6><p>' + shitty_encode(trigger.cookies) + '</p>' +
+				'<h6>IP</h6><p>' + shitty_encode(trigger.ip) + '</p>' +
+				'<h6>User-Agent</h6><p>' + shitty_encode(trigger.useragent) + '</p>' +
+				'<h6>localStorage</h6><p>' + shitty_encode(trigger.localStorage) + '</p>' +
+				'<h6>sessionStorage</h6><p>' + shitty_encode(trigger.sessionStorage) + '</p>' +
 				'</div>' +
-				'<a href="' + trigger.canvas + '" target="_blank"><img class="img-fluid" style="max-height:500px" src="' + trigger.canvas + '"></a>' +
-				'<textarea style="min-height:150px;font-size:11px" class="form-control" readonly>' + trigger.html + '</textarea>';
+				'<a href="' + shitty_encode(trigger.canvas) + '" target="_blank"><img class="img-fluid" style="max-height:500px" src="' + shitty_encode(trigger.canvas) + '"></a>' +
+				'<textarea style="min-height:150px;font-size:11px" class="form-control" readonly>' + shitty_encode(trigger.html) + '</textarea>';
 
 				return $('<button class="btn btn-sm btn-primary">View</button>').click(function(){
 					Swal.fire({ width:'85%', html:html });
