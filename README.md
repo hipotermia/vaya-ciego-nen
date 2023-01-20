@@ -1,3 +1,7 @@
+# ⛔ DEPRECATED ⛔
+Heroku instances are no longer free. 
+Please check [blinder](https://github.com/hipotermia/blinder) for an upgraded version to set up on your own VPS.
+
 # vaya-ciego-nen
 **vaya-ciego-nen** is a tool that allows you to create your own webapp to detect, manage and exploit **Blind Cross-site scripting (XSS)** vulnerabilities.
 
